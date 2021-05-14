@@ -35,9 +35,14 @@ let arrayCopy = (collection instanceof Array) ? collection.slice() : Object.valu
 
     },
 
-    functions: function(collection, predicate) {
-     
-
+    functions: function(object) {
+let functionNames = []
+      for (const key in object) {
+        if (typeof object[key] === "function") {
+          functionNames.push(key)
+        }
+      }
+      return functionNames.sort()
     },
 
 

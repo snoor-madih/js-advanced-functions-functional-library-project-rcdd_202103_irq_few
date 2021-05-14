@@ -23,7 +23,15 @@ let arrayCopy = (collection instanceof Array) ? collection.slice() : Object.valu
 
     },
 
-    reduce: function() {
+    reduce: function(collection, callback, accumulator) {
+      let newArray = collection.slice()
+        if (!accumulator) {
+          accumulator = collection[0]
+          newArray = collection.slice(1)
+        }
+      for (let i = 0; i < newArray.length; i++) {
+      }
+      return accumulator
 
     },
 

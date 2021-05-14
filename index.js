@@ -12,7 +12,14 @@ let arrayCopy = (collection instanceof Array) ? collection.slice() : Object.valu
       return collection
     },
 
-    map: function() {
+    map: function(collection, callback) {
+      let newArray = !(collection instanceof Array) ? Object.values(collection) :  collection.slice()
+       Alternative
+      let newArrayResult = []
+      for (let i = 0; i < newArray.length; i++) {
+        newArrayResult.push(callback(newArray[i]))    
+      }
+      return newArrayResult
 
     },
 

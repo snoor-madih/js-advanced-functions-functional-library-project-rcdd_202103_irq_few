@@ -37,6 +37,8 @@ let arrayCopy = (collection instanceof Array) ? collection.slice() : Object.valu
 
     functions: function(collection, predicate) {
       let newArray = (collection instanceof Array) ? collection.slice() : Object.values(collection) 
+      for (let i = 0; i < newArray.length; i++) {
+        
 
     },
 

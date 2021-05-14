@@ -151,19 +151,9 @@ const fi = (function() {
     },
 
     functions: function(object) {
-
-    // p:
-    // c: () => null
-    // k: () => null
-    // }
-    
-      // set variable to empty array
       let functionNames = []
-      // iterate over object key
       for (const key in object) {
-        // check typeof object[key] has the text function
         if (typeof object[key] === "function") {
-          // shovel key to functionNames array
           functionNames.push(key)
         }
       }
